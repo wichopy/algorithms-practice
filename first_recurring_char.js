@@ -6,21 +6,21 @@ var caseThree = 'ABC'
 
 // Return the first recurring char in a string, otherwise returns undefined.
 var firstRecurring = (str) => {
-	const letters = str.split('')
-	const letterCounts = {}
-	let first
+  const letters = str.split('')
+  const letterCounts = {}
+  let first
 
-	for (let char of letters) {
-		console.log(char)
-		if (letterCounts[char]) {
-			first = char
-			break;
-		} else {
-			letterCounts[char] = 1
-		}
-	}
+  for (let char of letters) {
+    console.log(char)
+    if (letterCounts[char]) {
+      first = char
+      break;
+    } else {
+      letterCounts[char] = 1
+    }
+  }
 
-	return first
+  return first
 }
 
 console.log('the first recurring char is :', firstRecurring(caseOne))
