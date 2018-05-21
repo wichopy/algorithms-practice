@@ -1,26 +1,30 @@
+// following along with : https://www.youtube.com/watch?v=GJdiM-muYqc
+
 var caseOne = 'ACBCA'
 var caseTwo = 'ACBDEBA'
 var caseThree = 'ABC'
 
+// Return the first recurring char in a string, otherwise returns undefined.
 var firstRecurring = (str) => {
 	const letters = str.split('')
 	const letterCounts = {}
 	let first
 
-	letters.forEach(char => {
+	for (let char of letters) {
+		console.log(char)
 		if (letterCounts[char]) {
-			letterCounts[char] += 1
-			if (first === undefined && letterCounts[char] === 2) {
-				first = char
-			}
+			first = char
+			break;
 		} else {
 			letterCounts[char] = 1
 		}
-	})
+	}
 
 	return first
 }
 
-console.log(firstRecurring(caseOne))
-console.log(firstRecurring(caseTwo))
-console.log(firstRecurring(caseThree))
+console.log('the first recurring char is :', firstRecurring(caseOne))
+console.log('the first recurring char is :', firstRecurring(caseTwo))
+console.log('the first recurring char is :', firstRecurring(caseThree))
+
+// O(n) as we only go through the array of characters once.
