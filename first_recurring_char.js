@@ -1,11 +1,11 @@
 // following along with : https://www.youtube.com/watch?v=GJdiM-muYqc
 
-var caseOne = 'ACBCA'
-var caseTwo = 'ACBDEBA'
-var caseThree = 'ABC'
+const caseOne = 'ACBCA'
+const caseTwo = 'ACBDEBA'
+const caseThree = 'ABC'
 
 // Return the first recurring char in a string, otherwise returns undefined.
-var firstRecurring = (str) => {
+const firstRecurring = (str) => {
   const letters = str.split('')
   const letterCounts = {}
   let first
